@@ -1,0 +1,245 @@
+:root {
+    --color-main: #75dbbd;
+    --color-sub: #3d405b;
+    --color-func: #e07a5f;
+    --color-reverse: #fcfcfc;
+    --color-line: #cdcdcd;
+    --base-bg: #eee;
+    --base-border: #bbb;
+    --base-preset: #555;
+    --wrapper-w: 870px;
+    --wrapper-base: 225px;
+    --wrapper-func: calc(870px - 225px);
+  }
+  
+  * {
+    outline: none;
+  }
+  
+  body, html {
+    margin: 0;
+    background: var(--base-bg);
+    font-family: 'Ubuntu', '微軟正黑體', sans-serif;
+    letter-spacing: 0.65px;
+    font-size: 15px;
+    color: var(--base-preset);
+    cursor: default;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--base-preset);
+    display: block;
+    transition-duration: 0.3s;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  h3 {
+    color: var(--color-sub);
+    margin: 10px 0;
+    text-transform: uppercase;
+    font-size: 18px;
+  }
+  
+  .resume {
+    width: var(--wrapper-w);
+    background: #fbfbfb;
+    margin: 20px auto;
+    border: 1px solid var(--base-border);
+    box-shadow: 0 0 20px -3px var(--base-border);
+    position: relative;
+    display: flex;
+  }
+  
+  .resume::before {
+    content: '';
+    width: 100%;
+    height: 6px;
+    background: var(--color-main);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .base, .func {
+    box-sizing: border-box;
+    float: left;
+  }
+  
+  .base {
+    width: var(--wrapper-base);
+    padding: 30px 15px;
+    background: rgba(var(--base-bg), 0.6);
+  }
+  
+  .base .profile {
+    background: var(--color-main);
+    padding: 30px 15px 5px 15px;
+    margin: -30px -15px 45px -15px;
+    position: relative;
+  }
+  
+  .base .profile .photo img {
+    width: 100%;
+    border-radius: 50%;
+  }
+  
+  .base .profile .info {
+    text-align: center;
+    color: var(--color-reverse);
+  }
+  
+  .base .profile .info .name {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 1.5em;
+    font-weight: normal;
+  }
+  
+  .base .contact div {
+    line-height: 24px;
+  }
+  
+  .base .contact div i {
+    color: var(--color-main);
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    text-align: center;
+    margin-right: 15px;
+    transition-duration: 0.3s;
+  }
+  
+  .base .contact div span {
+    position: relative;
+  }
+  
+  .func {
+    width: var(--wrapper-func);
+    padding: 30px 25px;
+  }
+  
+  .func h3 {
+    margin-top: 0;
+    color: var(--color-sub);
+  }
+  
+  .func h3 i {
+    color: var(--color-reverse);
+    background: var(--color-main);
+    width: 42px;
+    height: 42px;
+    font-size: 20px;
+    line-height: 42px;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    margin-right: 8px;
+    transition-duration: 0.3s;
+  }
+  
+  .skills-prog ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .skills-prog ul li span {
+    display: block;
+    width: 120px;
+  }
+  
+  .skills-prog ul li .skills-bar {
+    background: var(--color-line);
+    height: 2px;
+    width: calc(100% - 120px);
+    position: relative;
+    border-radius: 2px;
+  }
+  
+  .skills-prog ul li .skills-bar .bar {
+    position: absolute;
+    top: -1px;
+    height: 4px;
+    background: var(--color-main);
+    border-radius: 5px;
+  }
+  
+  /* Additional styling for interests */
+  .interests-items {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border: 1px solid var(--color-line);
+  }
+  
+  .interests-items div {
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    text-align: center;
+  }
+  
+  .interests-items div i {
+    font-size: 45px;
+    color: var(--color-main);
+    line-height: 80px;
+  }
+
+  
+  .projects {
+    text-align: center;
+}
+
+.projects h3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.projects h3 i {
+    font-size: 36px;
+    margin-bottom: 5px;
+    color: #FFD700; /* Optional: Gold color for the star icon */
+}
+
+.projects p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.projects-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.projects-items a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    font-size: 16px;
+    color: #333;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.projects-items a:hover {
+    color: #007BFF; /* Optional: Hover color */
+    transform: scale(1.1);
+}
+
+.projects-items i {
+    font-size: 36px;
+    margin-bottom: 5px;
+    color: #555; /* Icon color */
+}
